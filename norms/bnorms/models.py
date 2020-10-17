@@ -3,6 +3,8 @@ from django.db import models
 # Create your models here.
 
 class Boyd3(models.Model):
+    def __str__(self):
+        return self.age
     age = models.CharField(max_length=20)
     sex = models.CharField(max_length=20)
     low_age = models.DecimalField(max_digits=10, decimal_places=2)
@@ -15,6 +17,7 @@ class Boyd3(models.Model):
     sem_ves_wgt = models.DecimalField(max_digits=10, decimal_places=2)
     pgl_no = models.IntegerField(default=0)
     pgl_wgt = models.DecimalField(max_digits=10, decimal_places=2)
+    
     
 class Boyd4(models.Model):
     age = models.CharField(max_length=20)

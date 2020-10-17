@@ -83,6 +83,10 @@ celerybeat-schedule
 # dotenv
 .env
 
+# data
+
+norms/autopsynormals/
+
 # virtualenv
 .venv
 norms-venv/
