@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        table {
+  border-collapse: collapse;
+            width: 100%;
+}
+        th {align: center;}
+        td {text-align: center;}
+        tr:nth-child(even) {
+    background-color: #e6ffee;
+}
+    </style>
+</head>
+<body>
+
+{% if boyd_female %}
+    <table>
+        <caption>
+            Female organs from Boyd
+        </caption>
+        <thead>
+            <tr>
+                <th>Age</th>
+                <th>Ovary No</th>
+                <th>Ovary Wgt</th>
+                <th>Fallopian Tube No</th>
+                <th>Fallopian Tube Wgt</th>
+                <th>Uterus No</th>
+                <th>Uterus Wgt</th>
+            </tr>
+        </thead>
+        <tbody>
+    {% for res in boyd_female %}
+            <tr>
+                <td>{{ res.age }}</td>
+                <td>{{ res.ovary_no }}</td>
+                <td>{{ res.ovary_wgt }}</td>
+                <td>{{ res.f_tube_no }}</td>
+                <td>{{ res.f_tube_wgt }}</td>
+                <td>{{ res.uterus_no }}</td>
+                <td>{{ res.uterus_wgt }}</td>
+            </tr>
+    {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Here is reference</td>
+            </tr>
+        </tfoot>
+    </table>
+{% else %}
+    <p>Nothing from Boyd for females.</p>
+{% endif %}
+    
+</body>
+</html>

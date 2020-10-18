@@ -20,6 +20,8 @@ class Boyd3(models.Model):
     
     
 class Boyd4(models.Model):
+    def __str__(self):
+        return self.age
     age = models.CharField(max_length=20)
     sex = models.CharField(max_length=20)
     low_age = models.DecimalField(max_digits=10, decimal_places=2)
